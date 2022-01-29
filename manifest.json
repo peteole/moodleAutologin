@@ -2,17 +2,17 @@
 
     "manifest_version": 2,
     "name": "TUM Moodle Autologin",
-    "version": "0.1",
+    "version": "0.2",
   
     "description": "Login to TUM Moodle automatically",
   
     "content_scripts": [
       {
-        "matches": ["https://www.moodle.tum.de/login/index.php"],
+        "matches": ["https://www.moodle.tum.de/login/index.php","https://www.moodle.tum.de/"],
         "js": ["clickLogin.js"]
       },
       {
-        "matches": ["https://login.tum.de/idp/profile/SAML2/Redirect/SSO?execution=e1s1"],
+        "matches": ["https://login.tum.de/idp/profile/SAML2/Redirect/SSO?execution=*"],
         "js": ["clickApproveLogin.js"]
       }
     ]
