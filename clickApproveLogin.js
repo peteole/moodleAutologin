@@ -1,3 +1,7 @@
+if(document.body.innerHTML.includes("Invalid Request")){
+    window.location.href="https://moodle.tum.de"
+}
+
 const formElementWrappers=document.querySelectorAll('.form-element-wrapper');
 const keepLoginWrapper=[...formElementWrappers].find(formElementWrapper=>formElementWrapper.innerHTML.includes('keep me logged in'));
 const keepLoginCheckbox=keepLoginWrapper.getElementsByTagName("input")[0];
